@@ -1,0 +1,37 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-3">
+			<div class="logo-container">
+				<a href="http://127.0.0.1:5000/">
+					<img src="../static/image/Your trans.png" alt="Company Logo">
+				</a>
+			</div>
+		</div>
+		
+		<div class="col-2">
+			<a class="link"  href="contacts">Контакти</a>
+		</div>
+		<div class="col-2">
+			<a class="link"  href="news">Новини</a>
+		</div>
+		<div class="col-3">
+			<a class="link"  href="transportation">Перевезення</a>
+		</div>
+		<div class="col-2">
+			{% if current_user.is_authenticated %}
+			<a class="link"  href="account" id="account">{{ current_user.name }} {{ current_user.surname }}</a>
+			<form id="someQuitingForm" method="post" action="/quitAccount">
+				<a class="link"  href="#" onclick="document.getElementById('someQuitingForm').submit();">Вийти</a>
+			</form>
+			
+			
+			{% else %}
+			<a class="link" href="logIn" id="login">Увійти</a> 
+			{% endif %}
+		</div>
+		
+		
+		
+	</div>
+</div>

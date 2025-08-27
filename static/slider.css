@@ -1,0 +1,103 @@
+#slider{
+  width: 99vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+}
+#slider ul{
+  position: relative;
+  list-style: none;
+  width: 9999%;
+  left: 0;
+  transition: all 1s ease;
+}
+#slider ul li{
+	right: 4vw;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  float: left;
+}
+#slider ul li:nth-child(1){
+  background: url("image/1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#slider ul li:nth-child(2){
+  background: url("image/2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#slider ul li:nth-child(3){
+  background: url("image/3.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#prev, #next{
+  z-index: 999;
+  position: absolute;
+  top: 45%;
+  font-size: 35px;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: .3s ease;
+}
+#prev:hover, #next:hover{
+  transform: scale(1.5)
+}
+#prev{
+  left: 50px;
+}
+#next{
+  right: 50px;
+}
+
+#slider #num{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+#slider #num div{
+  display: inline-block;
+  width: 35px;
+  height: 5px;
+  background: rgba(255, 255, 255, .3);
+  margin: 2px;
+  transition: .3s ease;
+  cursor: pointer;
+}
+#slider #num div:hover{
+  background: #fff;
+}
+#lbar, #pbar{
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  top: 20px;
+  background: rgba(255, 255, 255, .3);
+  left: 50%;
+}
+#lbar{
+  transform: translateX(-50%)
+}
+#pbar{
+  background: #fff;
+  left: 5%;
+  box-shadow: 0 0 20px 1px rgb(196, 253, 255);
+  animation: load 8s ease-in infinite;
+}
+@keyframes load{
+  from{
+    width: 0;
+  }
+  to{
+    width: 90%;
+  }
+}
+
+
+
+

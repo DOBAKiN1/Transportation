@@ -1,0 +1,14 @@
+Admin:
+admin@admin:admin
+superAdmin@admin:admin
+
+Clients:
+Den@den.com:123
+client@client:123
+Vova@gmail.com:123
+DenSalvato@gmail.com:123
+
+Drivers:
+Praviy@gmail.com:123
+Kozlov@gmail.com:123
+Prihodko@gmail.com:123
